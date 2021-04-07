@@ -21,6 +21,12 @@
         <scope>compile</scope>
     </dependency>
 
+    <dependency>
+        <groupId>com.google.cloud</groupId>
+        <artifactId>google-cloud-mediatranslation</artifactId>
+        <version>0.3.0</version>
+    </dependency>
+
     <!-- https://mvnrepository.com/artifact/commons-cli/commons-cli -->
     <dependency>
         <groupId>commons-cli</groupId>
