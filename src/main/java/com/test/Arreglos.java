@@ -38,4 +38,20 @@ public class Arreglos {
             m[i][d-i] = "X";
         }
     }
+
+    public static void dibujarX2(String[][] m) {
+        int d = m.length - 1;
+        for (int i = 0; i < m.length; i++) {
+            for (int j = 0; j < m.length; j++) {
+
+                if (i == j) {
+                    m[i][i] = "X";
+                } else if (d - i == j) {
+                    m[i][d - i] = "X";
+                } else {
+                    m[i][j] = "_";
+                }
+            }
+        }
+    }
 }
