@@ -1,6 +1,8 @@
 package com.arrayList;
 
-public class Empleado2 {
+import java.text.DecimalFormat;
+
+public class Empleado {
     private int codArea;
     private String desArea;
 
@@ -9,19 +11,19 @@ public class Empleado2 {
     private double salary;
 
 
-    public Empleado2 (int codArea, String desArea) {
+    public Empleado(int codArea, String desArea) {
         this.codArea = codArea;
         this.desArea = desArea;
     }
 
-    public Empleado2 (String name, int edad, double salary, int codArea) {
+    public Empleado(String name, int edad, double salary, int codArea) {
         this.name = name;
         this.edad = edad;
         this.salary = salary;
         this.codArea = codArea;
     }
 
-    public Empleado2 () {}   // constructor sin parameters
+    public Empleado() {}   // constructor sin parameters
 
 
     public String buscaDes() {
@@ -29,7 +31,10 @@ public class Empleado2 {
     }
 
     public String buscaDatosPer () {
-        return name+"        "+edad+"           " + salary + "               " + codArea;
+        String format = new DecimalFormat("#.0#").format(salary);
+        return String.format("%s\t\t%d\t\t\t%s\t\t\t%d", name, edad, format, codArea);
+
+//        return name+"        "+edad+"           " + salary + "           " + codArea;
     }
 
 

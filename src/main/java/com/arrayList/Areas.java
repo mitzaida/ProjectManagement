@@ -1,7 +1,5 @@
 package com.arrayList;
 
-import java.util.ArrayList;
-
 public class Areas {
     private int codArea;
     private String desArea;
