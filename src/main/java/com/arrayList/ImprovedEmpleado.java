@@ -1,5 +1,7 @@
 package com.arrayList;
 
+import com.arrayList.estilos.*;
+
 /****************************************************************************
  *  Comencé de nueva con otra clase porque la before is a little desorganize jajajja
  *   clase Improved_Empleado which is the main one.

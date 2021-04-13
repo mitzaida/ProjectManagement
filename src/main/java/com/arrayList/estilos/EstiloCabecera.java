@@ -1,4 +1,6 @@
-package com.arrayList;
+package com.arrayList.estilos;
+
+import com.arrayList.Empleado;
 
 import java.util.List;
 
