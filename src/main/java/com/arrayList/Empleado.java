@@ -32,7 +32,7 @@ public class Empleado {
 
     public String buscaDatosPer () {
         String format = new DecimalFormat("#.0#").format(salary);
-        return String.format("%s\t\t%d\t\t\t%s\t\t\t%d", name, edad, format, codArea);
+        return String.format("%s\t\t%d\t\t\t\t\t\t%d", name, edad, codArea);
 
 //        return name+"        "+edad+"           " + salary + "           " + codArea;
     }
