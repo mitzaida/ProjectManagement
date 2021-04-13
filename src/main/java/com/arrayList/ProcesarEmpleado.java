@@ -1,5 +1,8 @@
 package com.arrayList;
 
+import com.arrayList.estilos.EstiloCabecera;
+import com.arrayList.estilos.EstiloCabeceraGenerica;
+
 import java.util.ArrayList;
 import java.util.List;
 
