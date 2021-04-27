@@ -1,4 +1,4 @@
-package com.pattern.model;
+package factu;
 
 import lombok.Data;
 

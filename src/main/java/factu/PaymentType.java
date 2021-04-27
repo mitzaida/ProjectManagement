@@ -1,4 +1,4 @@
-package com.pattern.model;
+package factu;
 
 public enum PaymentType {
     CASH,

@@ -1,12 +1,16 @@
 package LabsPmData;
 
+//
 public enum Rating {
-    NOT_RATED("*\u2606\u2606\u2606\u2606\u2606"),
-    ONE_STAR("*\u2605\u2606\u2606\u2606\u2606"),
-    TWO_STAR("*\u2605\u2605\u2606\u2606\u2606"),
-    THREE_STAR("*\u2605\u2605\u2605\u2606\u2606"),
-    FOUR_STAR("*\u2605\u2605\u2605\u2605\u2606"),
-    FIVE_STAR("*\u2605\u2605\u2605\u2605\u2605");
+    NOT_RATED("*\u2606\u2606\u2606\u2606\u2606")  ,
+    ONE_STAR("*\u2605\u2606\u2606\u2606\u2606")   ,
+    TWO_STAR("*\u2605\u2605\u2606\u2606\u2606")   ,
+    THREE_STAR("*\u2605\u2605\u2605\u2606\u2606") ,
+    FOUR_STAR("*\u2605\u2605\u2605\u2605\u2606")  ,
+    FIVE_STAR("*\u2605\u2605\u2605\u2605\u2605")  ,
+    SIX_STAR("*\u2605\u2605\u2605\u2605\u2605\u2605") ,
+    EIGHT_STAR("*\u2605\u2605\u2605\u2605\u2605\u2605\u2605\u2605") ,
+    NINE_STAR("*\u2605\u2605\u2605\u2605\u2605\u2605\u2605\u2605\u2605") ;
 
     private String stars;
     private Rating(String stars) {

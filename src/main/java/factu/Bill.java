@@ -1,5 +1,7 @@
-package com.pattern.model;
+package factu;
 
+import factu.Item;
+import factu.PaymentType;
 import lombok.Data;
 
 import java.util.List;

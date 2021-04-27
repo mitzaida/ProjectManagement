@@ -1,10 +1,12 @@
-package com.pattern;
+package factu;
 
+import com.pattern.DataUtil;
 import lombok.Data;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+//import static factu.DatosProductos.getNombreProductos;
 
 @Data
 public class ApplicationRaw {
@@ -17,15 +19,16 @@ public class ApplicationRaw {
 
         // Obtener todos los productos.
         System.out.println("Productos en almacen:");
-        for (String valor : DataUtil.getNombreProductos()) {
-            System.out.println(valor);
 
-            // Si existe un producto que con tenga la letra B o C entonces almacenarlos en los detalles de la clase principal
-            if (valor.contains("B") || valor.contains("C")) {
-                contador++;
-                ar.getDetalles().add(valor);
-            }
-        }
+//        for (String valor : getNombreProductos()) {
+//            System.out.println(valor);
+//
+//            // Si existe un producto que con tenga la letra B o C entonces almacenarlos en los detalles de la clase principal
+//            if (valor.contains("B") || valor.contains("C")) {
+//                contador++;
+//                ar.getDetalles().add(valor);
+//            }
+//        }
 
         // Crear la factura e inicializar sus atributos
         Factura factura = new Factura();
@@ -56,8 +59,3 @@ public class ApplicationRaw {
     }
 }
 
-@Data
-class Factura {
-    private List<String> productos;
-    private BigDecimal total;
-}
