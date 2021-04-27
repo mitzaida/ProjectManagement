@@ -2,6 +2,9 @@ package com.arrayList;
 
 import com.arrayList.estilos.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /****************************************************************************
  *  Comencé de nueva con otra clase porque la before is a little desorganize jajajja
  *   clase Improved_Empleado which is the main one.
@@ -12,33 +15,39 @@ public class ImprovedEmpleado {
         String txt = "ligero";
         EstiloCabecera estilo;
 
-        if (txt.equalsIgnoreCase("generica")) {
-            estilo = new EstiloCabeceraGenerica();
-        } else if (txt.equalsIgnoreCase("ligero")) {
-            estilo = new EstiloCabeceraLigero();
-        } else {
-            estilo = new EstiloCabeceraModerno();
+        boolean falSe = Boolean.parseBoolean("falSe");
+
+        try{
+            System.out.print("");
+            badMethod();
+        }catch(Exception ex){
+            System.out.println("1");
+        }finally {
+            System.out.println("2");
         }
+        System.out.println("D");
+
+        main(null);
 
 
-        ProcesarEmpleado procesarEmpleado = new ProcesarEmpleado(estilo);
-        procesarEmpleado.cargarListas();
-        procesarEmpleado.mostrarInformacion();
+        txt.substring(0, 2);
+        System.out.print(txt.getClass().getSimpleName());
+        System.out.println("asd" instanceof  String);
+        List m = new ArrayList();
 
-        procesarEmpleado.setEstilo(new EstiloCabeceraModerno());
-        procesarEmpleado.mostrarInformacion();
+        try {
+            System.out.print("");
+        }catch(Exception e){
 
-        procesarEmpleado.setEstilo(new EstiloCabeceraGenerica());
-        procesarEmpleado.mostrarInformacion();
+        }
+        m.add("");
+        m.add(2);
+        System.out.println(m.get(0) instanceof Object);
+        System.out.println(m.get(1) instanceof  Integer);
+    }
 
-        procesarEmpleado.setEstilo(new EstiloCabeceraAsterisco());
-        procesarEmpleado.mostrarInformacion();
-
-
-//        procesarEmpleado.agregar(new Empleado("E1", 1, 2, 3));
-//        procesarEmpleado.agregar(new Empleado("E2", 4, 5, 100));
-//        procesarEmpleado.agregar(new Areas(10, "A1"));
-//        procesarEmpleado.mostrarInformacion();
+    private static void badMethod() {
+        throw new Error();
     }
 
 }
