@@ -28,8 +28,9 @@ public class RutaDroneVariation {
     public static void procesarMatrixDos(int filas, int columnas, int puntoFilaInicio, int puntoColumnaInicio,
                                          int puntoFilaFinal, int puntoColumnaFinal) {
 
-        String[][] matrixDos;
-        matrixDos = initializePath(filas, columnas);
+//        String[][] matrixDos;
+//        matrixDos = initializePath(filas, columnas);
+          String [] [] matrixDos = initializePath(filas, columnas);
 
         if (moverDrone(matrixDos, puntoFilaInicio, puntoColumnaInicio, puntoFilaFinal, puntoColumnaFinal)) {
             System.out.println("Se encontró el final!");
@@ -38,9 +39,10 @@ public class RutaDroneVariation {
         }
 
 
-    }  // Fin M. cargaPrintMatriYX
+    }  // Fin M. procesarMatrixDos
 
 
+    //**************************************************************
     private static boolean moverDrone(String[][] matrixDos, int fila,
                                       int columna, int puntoFilaFinal,
                                       int puntoColumnaFinal) {
@@ -54,7 +56,8 @@ public class RutaDroneVariation {
         // devolver FALSE para no continuar con esta ruta.
         if (!validateCoordinate(matrixDos, fila, columna)) {
             return false;
-        }
+        }   ///   Neiro.... si niegas la negación del return del M., i mean, there's an obstaculo.
+
 
         // Marco la posición como ocupada.
         matrixDos[fila][columna] = "x";
@@ -68,8 +71,15 @@ public class RutaDroneVariation {
                 || moverDrone(matrixDos, fila, columna - 1, puntoFilaFinal, puntoColumnaFinal)
                 || moverDrone(matrixDos, fila - 1, columna, puntoFilaFinal, puntoColumnaFinal);
 
-    }
+        //  Cómo funciona esto ?????
 
+
+
+
+    }  //  Fin del M. moverDrone
+
+
+    //**************************************************************
     private static void showPath(String[][] matrixDos) {
         for (int i = 0; i < matrixDos.length; i++) {
             for (int j = 0; j < matrixDos[0].length; j++) {
@@ -81,14 +91,18 @@ public class RutaDroneVariation {
     }
 
 
+
+    //**************************************************************
     private static boolean validateCoordinate(String[][] matrixDos, int fila, int columna) {
         if (matrixDos.length <= fila || fila < 0 || columna < 0 || columna >= matrixDos[0].length) {
             return false;
         }
-        return !matrixDos[fila][columna].equals("x");
+        return !matrixDos[fila][columna].equals("x");    //  niega que en la coordenada haya un obstáculo.
     }
 
 
+
+    //**************************************************************
     private static String[][] initializePath(int row, int column) {
         String[][] matrixDos = new String[column][row];
 
@@ -98,6 +112,9 @@ public class RutaDroneVariation {
                 matrixDos[x][y] = "0";
             }
         }
+
+        // por qué lo llenaste filas columnas, si yo lo llené columna fila, como lo usas tú.
+
 //        Obstáculos cuando la matrix sea 10x10
 //        matrixDos[0][3] = "|";
 //        matrixDos[1][3] = "|";
