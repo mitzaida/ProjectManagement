@@ -27,12 +27,19 @@ public class LogProcess {
             while ((linea = br.readLine()) != null) {
                 if (
 //                        linea.contains("SpeechToTextTranslatorImproved - 8589") &&
-//                                (linea.contains("## transcript     ##") ||
+//                                (
+//                        linea.contains("## transcript     ##") ||
 //                                linea.contains("## fromIndex      ##") ||
 //                                linea.contains("## lastTranscript ##") ||
-//                                linea.contains("## Full Injected Transcript ###") ||
-                                linea.contains("## Injected transcript  ##"))
-                    pw.println(linea);
+                                linea.contains("## Full Injected Transcript ###") ||
+//                                linea.contains("## Injected transcript  # es-ES#")
+//                                linea.contains("## Injected transcript  # fr-FR#")
+                                linea.contains("## Injected transcript  #")
+                )
+                    if (linea.contains("#")) {
+//                        pw.println(linea.substring(linea.lastIndexOf("#") + 1));
+                        pw.println(linea.substring(linea.lastIndexOf("  ##") + 4));
+                    }
             }
 
         } catch (Exception e) {
